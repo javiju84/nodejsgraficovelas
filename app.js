@@ -16,19 +16,47 @@ MongoClient.connect(dbHost, function(err,db){
 
 function getData(responseObj){
 	dbObject.collection("precios").find({}).toArray(function(err, docs){
-		if ( err ) throw Serr;
+		if ( err ) throw err;
 		var dayArray = [];
 		var volumen = [];
+		var abierto = [];
+		var alto = [];
+		var bajo = [];
+		var cierre = [];
 
 		for (index in docs){
 			var doc = docs[index];
 			var x = doc["x"];
+			var open = doc["open"];
+			var high = doc["high"];
+			var low = doc["low"];
+			var close = doc["close"];
 			var volume = doc["volume"];
 			dayArray.push({"label": x});
+			abierto.push({"value": open});
+			alto.push({"value": high});
+			bajo.push({"value": low});
+			cierre.push({"value":close});
 			volumen.push({"value": volume});
 		}
 
 		var dataset = [
+			{
+				"seriesname" : "Open",
+				"data" : abierto
+			},
+			{
+				"seriesname" : "Alto",
+				"data" : alto
+			},
+			{
+				"seriesname" : "Bajo",
+				"data" : bajo
+			},
+			{
+				"seriesname" : "Cierre",
+				"data" : cierre
+			},
 			{
 				"seriesname" : "Volumen",
 				"data" : volumen
