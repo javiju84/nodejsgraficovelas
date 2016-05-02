@@ -1,0 +1,27 @@
+{
+  "name": "graficovelas",
+  "version": "1.0.0",
+  "description": "grafico de velas con nodejs y mongodb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javiju84/nodejsgraficovelas.git"
+  },
+  "author": "javiju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javiju84/nodejsgraficovelas/issues"
+  },
+  "homepage": "https://github.com/javiju84/nodejsgraficovelas#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.4.14",
+    "request": "^2.72.0"
+  }
+}
