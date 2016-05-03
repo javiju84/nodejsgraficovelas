@@ -27,8 +27,9 @@ $(function(){
 			var candlestickChart = new FusionCharts({
 				type: 'candlestick',
 				renderAt: 'chart-container',
-				width: '1000',
-   				height: '600',
+				id: 'myChart',
+				width: '600',
+   				height: '400',
    				dataFormat: 'json',
    				dataSource: {
    					chart: chartProperties,

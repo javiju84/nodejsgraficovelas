@@ -62,6 +62,18 @@ function getData(responseObj){
 				"data" : volumen
 			}
 		];
+		var dayArray = [
+			{
+                "label": "2 month ago",
+                "x": "1"
+            }, {
+                "label": "1 month ago",
+                "x": "31"
+            }, {
+                "label": "Today",
+                "x": "60"
+            }
+		];
 
 		var response = {
 			"dataset" : dataset,
