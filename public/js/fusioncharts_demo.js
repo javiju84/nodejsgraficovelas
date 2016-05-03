@@ -3,8 +3,8 @@ var chartData;
 $(function(){
 	$.ajax({
 
-		url: "http://localhost:3300/informacion",
-		type: "GET",
+		url: 'http://localhost:3300/informacion',
+		type: 'GET',
 		success : function(data){
 			chartData = data;
 			var template = Handlebars.compile($("#tabular-template").html());
@@ -12,12 +12,12 @@ $(function(){
 
 			var chartProperties = {
 				"caption": "Daily Stock Price HRYS",
-       			"subCaption": "Last 2 months",
-        		"numberprefix": "$",
-       			"pyaxisname": "Price",
-       			"vyaxisname": "Volume (In Millions)",
-       			"showVolumeChart": "0",
-       			"theme": "fint"
+           		"subCaption": "Last 2 months",
+            	"numberprefix": "$",
+            	"pyaxisname": "Price",
+            	"vyaxisname": "Volume (In Millions)",
+            	"showVolumeChart": "0",
+            	"theme": "fint"
 			};
 
 			var categoriesArray = [{
@@ -25,10 +25,10 @@ $(function(){
 			}];
 
 			var candlestickChart = new FusionCharts({
-				type: "candlestick",
-				renderAt: "chart-container",
-				width: '600',
-   				height: '300',
+				type: 'candlestick',
+				renderAt: 'chart-container',
+				width: '1000',
+   				height: '600',
    				dataFormat: 'json',
    				dataSource: {
    					chart: chartProperties,

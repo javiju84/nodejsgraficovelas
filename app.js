@@ -87,5 +87,5 @@ app.get("/", function(req,res){
 });
 
 app.listen("3300", function(){
-	console.log("Server up: localhost:3300")
-})
+	console.log("Server up: localhost:3300");
+});
